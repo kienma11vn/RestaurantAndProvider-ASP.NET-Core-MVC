@@ -1,0 +1,13 @@
+﻿@model RegisterVM
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<form asp-action="Register" asp-controller="Account" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    Email<input asp-for="Email" class="form-control" />
+    Password<input asp-for="Password" class="form-control" />
+    Confirm Password<input asp-for="ConfirmPassword" class="form-control" />
+    <input type="submit" value="Register" />
+</form>
